@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: "Work Sans", sans-serif;
+    overflow: hidden;
+}
+/*  */
+.animation {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.loading {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(150, 150, 150, 0.2);
+    border-radius: 50%;
+    border-top-color: rgb(80, 162, 233);
+    animation: loadingAnimation 1s 0s ease-in-out;
+}
+
+@keyframes loadingAnimation {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.animation.off {
+    transition: all 0.3s;
+    transform: scale(0);
+}
+
+.animation.off ~ .telegram__users-section {
+    transform: translate(0%);
+    transition: transform 0.4s;
+}
+
+/*  */
+
+/*  */
+
+.telegram {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.telegram__users-section {
+    width: 25%;
+    height: 100%;
+    transform: translate(-100%);
+}
+
+.telegram__chat-section {
+    width: 75%;
+    height: 100%;
+    background: url("../../img/telegram-background.jpg");
+    background-position: center center;
+}
+
+.telegram-settings-header {
+    width: 100%;
+    height: 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+.back {
+    font-size: 30px;
+    padding: 4px 4px 0px 4px;
+    /* padding: 3px; */
+}
+
+.log-out {
+    font-size: 25px;
+    padding: 4px 4px 0 4px;
+    transition: color 0.1s;
+}
+
+.back,
+.log-out {
+    cursor: pointer;
+    color: rgb(112 117 121);
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+/* .back:hover {
+    background-color: #f4f4f5;
+} */
+
+.log-out:hover {
+    background-color: red;
+    color: white;
+}
+
+.telegram-settings-body {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.telegram-settings-body__img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.telegram-settings-body__name {
+    /*  */
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.telegram-settings-body__number {
+    /*  */
+    font-size: 14px;
+    color: #868e96;
+    margin-top: 5px;
+}
+
+.telegram-settings-list {
+    width: 100%;
+    height: 67%;
+    padding: 20px 10px 0px 10px;
+}
+
+.telegram-settings-list__item {
+    display: flex;
+    align-items: center;
+    padding: 20px 20px;
+    border-radius: 20px;
+}
+
+.telegram-settings-list__item:hover {
+    background-color: red;
+    background-color: #f4f4f5;
+}
+
+.settings-list__icon {
+    font-size: 25px;
+    margin-right: 20px;
+    color: rgb(112 117 121);
+    cursor: pointer;
+}
+
+.set {
+    display: none;
+    /* transform: scale(0); */
+    /* transition: transorm 0.3s; */
+}
+
+.flexme.open ~ .set {
+    display: flex;
+    border-radius: 0 15px 15px 0;
+
+    /* border: none; */
+    background-color: #f4f4f5;
+    padding: 10px;
+    border: 2px solid #f4f4f5;
+    outline: none;
+    /* transform: scale(1); */
+    transition: border-color 0.3s;
+    /* transform: scale(1); */
+    /* transition: transorm 0.3s; */
+}
+
+.flexme {
+    display: none;
+    /* transform: scale(0); */
+    /* transition: transorm 0.3s; */
+    /* display: none; */
+}
+
+.flexme.open {
+    display: flex;
+    border-radius: 15px 0 0 15px;
+
+    /* border: none; */
+    background-color: #f4f4f5;
+    padding: 10px;
+    border: 2px solid #f4f4f5;
+    outline: none;
+    /* transform: scale(1); */
+    transition: border-color 0.3s;
+    /* padding: 5px; */
+    /* background-color: red; */
+    /* border: 2px solid inherit; */
+}
+
+.flexme.open:focus,
+.flexme.open:hover,
+.flexme.open ~ .set:hover,
+.flexme.open ~ .set:focus {
+    border-color: #4c90e6;
+}

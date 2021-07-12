@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram/sign</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="https://web.telegram.org/z/favicon-32x32.png">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <main class="main">
+        <div class="container">
+            <img src="./img/logo.svg" alt="Telegram" class="telegram-logo">
+            <h1 class="text-section__title">
+                Sign in to Telegram
+            </h1>
+            <p class="text-section__subtext">
+                Please confirm your country and<br>
+                enter your phone number.
+            </p>
+        </div>
+        <form class="form-section">
+            <select class="form__country-code" name="" id="country-code">
+                <option value="select">Choose your country</option>
+                <option value="uz">Uzbekistan</option>
+                <option value="ru">Russia</option>
+                <option value="us">United States</option>
+            </select>
+            <input maxlength="13" class="form__number" type="tel">
+            <a href="" class="form__button">NEXT</a>
+        </form>
+    </main>
+
+    <!-- !JavaScript -->
+    <script src="./js/main.js"></script>
+</body>
+
+
+</html>
