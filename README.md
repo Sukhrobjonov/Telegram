@@ -1,2 +1,2 @@
-Telegram finnaly version
+Telegram finnaly version:
 https://telegram-finally.netlify.app
